@@ -1,0 +1,59 @@
+@font-face { font-family: Forum; src: url(fonts/forum-latin-400-normal.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: Cormorant; font-weight: 500; src: url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: Cormorant; font-weight: 500; font-style: italic; src: url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: Cormorant; font-weight: 600; src: url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2"); font-display: swap; }
+
+:root {
+  --night: #060814;
+  --dusk: #0d1128;
+  --cream: #f6eedd;
+  --mist: #a9b3d8;
+  --lamp: #ffe2a6;
+  --ember: #f2ad52;
+  --line: rgba(255, 226, 166, 0.18);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--night); color: var(--cream); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: Cormorant, Georgia, serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.5;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 22%, var(--dusk), transparent 70%),
+    var(--night);
+  min-height: 100vh;
+  font-variant-numeric: lining-nums;
+}
+a { color: var(--lamp); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: #fff; }
+:focus-visible { outline: 2px solid var(--lamp); outline-offset: 3px; border-radius: 4px; }
+
+.wordmark {
+  font-family: Forum, serif;
+  letter-spacing: 0.2em;
+  padding-left: 0.2em;
+  line-height: 1;
+  text-box: trim-both cap alphabetic;
+  color: var(--cream);
+}
+
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 17px;
+  color: var(--mist);
+  border-top: 1px solid var(--line);
+}
+footer a { color: var(--mist); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
